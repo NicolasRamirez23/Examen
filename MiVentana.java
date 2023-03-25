@@ -65,7 +65,7 @@ public class MiVentana extends JFrame {
 		timer.schedule(tarea, 2000);
 		
 	}
-		
+	System.out.println("hola");
 	public void Bienvenida() {
 		bienvenida = new JPanel();
 		bienvenida.setSize(300,120);
@@ -114,13 +114,13 @@ public class MiVentana extends JFrame {
 		usuario.setBackground(Color.GREEN);
 		login.add(usuario);
 		
-		JLabel iniciarcontraseña = new JLabel("Contraseña",JLabel.CENTER);
-		iniciarcontraseña.setFont(new Font("Comic Sans", Font.BOLD,16));
-		iniciarcontraseña.setSize(250, 30);
-		iniciarcontraseña.setLocation(75, 155);
-		iniciarcontraseña.setOpaque(true);
-		iniciarcontraseña.setBackground(Color.GREEN);
-		login.add(iniciarcontraseña);
+		JLabel iniciarcontraseÃ±a = new JLabel("ContraseÃ±a",JLabel.CENTER);
+		iniciarcontraseÃ±a.setFont(new Font("Comic Sans", Font.BOLD,16));
+		iniciarcontraseÃ±a.setSize(250, 30);
+		iniciarcontraseÃ±a.setLocation(75, 155);
+		iniciarcontraseÃ±a.setOpaque(true);
+		iniciarcontraseÃ±a.setBackground(Color.GREEN);
+		login.add(iniciarcontraseÃ±a);
 		
 		JButton entrarcuentar = new JButton();
 		entrarcuentar.setText("Aceptar");
