@@ -98,6 +98,94 @@ public class MiVentana extends JFrame {
 		login.setLayout(null);
 		login.setBackground(Color.ORANGE);
 		
+		
+		JMenu cuentaMenu = new JMenu("Cuenta");
+		JMenuItem miCuentaMenuItem = new JMenuItem("Mi cuenta");
+		cuentaMenu.add(miCuentaMenuItem);
+		JMenuItem cerrarSesionMenuItem = new JMenuItem("Cerrar sesion");
+		cuentaMenu.add(cerrarSesionMenuItem);
+		JMenuBar menuBar = new JMenuBar();
+		menuBar.add(cuentaMenu);
+		this.setJMenuBar(menuBar);
+		
+		miCuentaMenuItem.addActionListener(new ActionListener() {
+		    @Override
+		    public void actionPerformed(ActionEvent e) {
+		        
+		        JPanel miCuentaPanel = new JPanel();
+		        miCuentaPanel.setSize(400, 290);
+		        miCuentaPanel.setLocation(50, 50);
+		        miCuentaPanel.setLayout(null);
+		        miCuentaPanel.setBackground(Color.ORANGE);
+
+		        
+		        JLabel nameLabel = new JLabel("Nombre:");
+		        nameLabel.setBounds(20, 20, 100, 20);
+		        JTextField nameField = new JTextField();
+		        nameField.setBounds(120, 20, 200, 20);
+
+		        JLabel apellidoLabel = new JLabel("Apellido:");
+		        apellidoLabel.setBounds(20, 50, 100, 20);
+		        JTextField apellidoField = new JTextField();
+		        apellidoField.setBounds(120, 50, 200, 20);
+
+		        JLabel emailLabel = new JLabel("Email:");
+		        emailLabel.setBounds(20, 80, 100, 20);
+		        JTextField emailField = new JTextField();
+		        emailField.setBounds(120, 80, 200, 20);
+
+		        JLabel passwordLabel = new JLabel("Contraseña:");
+		        passwordLabel.setBounds(20, 110, 100, 20);
+		        JPasswordField passwordField = new JPasswordField();
+		        passwordField.setBounds(120, 110, 200, 20);
+
+		        JLabel confirmPasswordLabel = new JLabel("Confirmar contraseña:");
+		        confirmPasswordLabel.setBounds(20, 140, 150, 20);
+		        JPasswordField confirmPasswordField = new JPasswordField();
+		        confirmPasswordField.setBounds(170, 140, 150, 20);
+
+		        JButton cancelButton = new JButton("Cancelar");
+		        cancelButton.setBounds(150, 180, 100, 30);
+
+		        JButton updateButton = new JButton("Actualizar datos");
+		        updateButton.setBounds(260, 180, 130, 30);
+
+		        miCuentaPanel.add(nameLabel);
+		        miCuentaPanel.add(nameField);
+		        miCuentaPanel.add(apellidoLabel);
+		        miCuentaPanel.add(apellidoField);
+		        miCuentaPanel.add(emailLabel);
+		        miCuentaPanel.add(emailField);
+		        miCuentaPanel.add(passwordLabel);
+		        miCuentaPanel.add(passwordField);
+		        miCuentaPanel.add(confirmPasswordLabel);
+		        miCuentaPanel.add(confirmPasswordField);
+		        miCuentaPanel.add(cancelButton);
+		        miCuentaPanel.add(updateButton);
+
+		      
+		        getContentPane().removeAll();
+		        getContentPane().add(miCuentaPanel);
+		        revalidate();
+		        repaint();
+		    }
+		});
+
+		
+		JMenu usuariosMenu = new JMenu("Usuarios");
+		JMenuItem listaUsuarioMenuItem = new JMenuItem("Lista de usuarios");
+		JMenuItem crearUsuarioMenuItem = new JMenuItem("Crear usuarios");
+		usuariosMenu.add(listaUsuarioMenuItem);
+		usuariosMenu.add(crearUsuarioMenuItem);
+		menuBar.add(usuariosMenu);
+
+		
+		
+		JMenu ayudaMenu = new JMenu("Ayuda");
+		JMenuItem manualMenuItem = new JMenuItem("Como crear usuarios??");
+		ayudaMenu.add(manualMenuItem);
+		menuBar.add(ayudaMenu);
+		
 		JLabel titleinicio = new JLabel("Iniciar Sesion",JLabel.CENTER);
 		titleinicio.setFont(new Font("Comic Sans", Font.BOLD,20));
 		titleinicio.setSize(280, 40);
