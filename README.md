@@ -1,2 +1,2 @@
 # Examen
-Examen de Nicolás Ramírez y RIcardo Garayzar IDS TM
+Examen de Nicolás Ramírez y Ricardo Garayzar IDS TM
